@@ -6,14 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="education-service" />
         <module name="VirtualAirlineManagerBackEnd" />
+        <module name="education-service" />
         <module name="personel-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="education-service" target="11" />
       <module name="personel-service" target="11" />
+      <module name="rws-management-tool" target="1.5" />
       <module name="VirtualAirlineManagerBackEnd" target="11" />
     </bytecodeTargetLevel>
   </component>

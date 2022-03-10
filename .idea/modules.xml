@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/education-service/education-service.iml" filepath="$PROJECT_DIR$/education-service/education-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/personel-service/personel-service.iml" filepath="$PROJECT_DIR$/personel-service/personel-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rws-management-tool.iml" filepath="$PROJECT_DIR$/rws-management-tool.iml" />
     </modules>
   </component>
 </project>
