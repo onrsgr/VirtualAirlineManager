@@ -1,13 +1,13 @@
-package com.onrsgr.rws.educationservice;
+package com.onrsgr.rws.personelservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EducationServiceApplication {
+public class PersonelServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EducationServiceApplication.class, args);
+		SpringApplication.run(PersonelServiceApplication.class, args);
 	}
 
 }

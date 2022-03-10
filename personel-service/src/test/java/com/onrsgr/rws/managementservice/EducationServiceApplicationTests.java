@@ -1,4 +1,4 @@
-package com.onrsgr.rws.educationservice;
+package com.onrsgr.rws.managementservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

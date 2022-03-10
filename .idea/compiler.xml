@@ -13,12 +13,14 @@
     <bytecodeTargetLevel>
       <module name="education-service" target="11" />
       <module name="management-service" target="11" />
+      <module name="personel-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="education-service" options="-parameters" />
       <module name="management-service" options="-parameters" />
+      <module name="personel-service" options="-parameters" />
     </option>
   </component>
 </project>

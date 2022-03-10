@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/VirtualAirlineManagerBackEnd.iml" filepath="$PROJECT_DIR$/.idea/VirtualAirlineManagerBackEnd.iml" />
       <module fileurl="file://$PROJECT_DIR$/education-service/education-service.iml" filepath="$PROJECT_DIR$/education-service/education-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/management-service/management-service.iml" filepath="$PROJECT_DIR$/management-service/management-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personel-service/management-service.iml" filepath="$PROJECT_DIR$/personel-service/management-service.iml" />
     </modules>
   </component>
 </project>
