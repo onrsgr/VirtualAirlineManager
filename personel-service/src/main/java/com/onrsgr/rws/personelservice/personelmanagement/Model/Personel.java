@@ -1,13 +1,11 @@
-package com.onrsgr.rws.personelservice.Model;
+package com.onrsgr.rws.personelservice.personelmanagement.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name = "rws_personel")
 public class Personel {
 
     @Id

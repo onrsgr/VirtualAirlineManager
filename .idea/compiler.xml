@@ -7,19 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="education-service" />
-        <module name="management-service" />
+        <module name="VirtualAirlineManagerBackEnd" />
+        <module name="personel-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="education-service" target="11" />
-      <module name="management-service" target="11" />
       <module name="personel-service" target="11" />
+      <module name="VirtualAirlineManagerBackEnd" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="VirtualAirlineManagerBackEnd" options="-parameters" />
       <module name="education-service" options="-parameters" />
-      <module name="management-service" options="-parameters" />
       <module name="personel-service" options="-parameters" />
     </option>
   </component>
