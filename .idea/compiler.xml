@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
         <module name="VirtualAirlineManagerBackEnd" />
-        <module name="education-service" />
         <module name="personel-service" />
+        <module name="education-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="11" />
       <module name="education-service" target="11" />
       <module name="personel-service" target="11" />
       <module name="rws-management-tool" target="1.5" />
@@ -21,6 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="VirtualAirlineManagerBackEnd" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
       <module name="education-service" options="-parameters" />
       <module name="personel-service" options="-parameters" />
     </option>
