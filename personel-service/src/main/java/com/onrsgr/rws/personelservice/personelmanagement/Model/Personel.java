@@ -25,18 +25,11 @@ public class Personel {
     Date personelDateOfBirth;
     @NotNull
     String personelRank;
+    @NotNull
+    @Column(name = "ivao_id")
+    Integer ivaoID;
 
     public Personel() {
-    }
-
-    public Personel(Integer personelId, String personelRegistration, String personelCallsign, String personelName, String personelSurname, Date personelDateOfBirth, String personelRank) {
-        this.personelId = personelId;
-        this.personelRegistration = personelRegistration;
-        this.personelCallsign = personelCallsign;
-        this.personelName = personelName;
-        this.personelSurname = personelSurname;
-        this.personelDateOfBirth = personelDateOfBirth;
-        this.personelRank = personelRank;
     }
 
     public Integer getPersonelId() {
@@ -95,29 +88,11 @@ public class Personel {
         this.personelRank = personelRank;
     }
 
-    @Override
-    public String toString() {
-        return "Personel{" +
-                "personelId=" + personelId +
-                ", personelRegistration='" + personelRegistration + '\'' +
-                ", personelCallsign='" + personelCallsign + '\'' +
-                ", personelName='" + personelName + '\'' +
-                ", personelSurname='" + personelSurname + '\'' +
-                ", personelDateOfBirth=" + personelDateOfBirth +
-                ", personelRank='" + personelRank + '\'' +
-                '}';
+    public Integer getIvaoID() {
+        return ivaoID;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Personel personel = (Personel) o;
-        return Objects.equals(personelId, personel.personelId) && Objects.equals(personelRegistration, personel.personelRegistration) && Objects.equals(personelCallsign, personel.personelCallsign) && Objects.equals(personelName, personel.personelName) && Objects.equals(personelSurname, personel.personelSurname) && Objects.equals(personelDateOfBirth, personel.personelDateOfBirth) && Objects.equals(personelRank, personel.personelRank);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(personelId, personelRegistration, personelCallsign, personelName, personelSurname, personelDateOfBirth, personelRank);
+    public void setIvaoID(Integer ivaoID) {
+        this.ivaoID = ivaoID;
     }
 }
