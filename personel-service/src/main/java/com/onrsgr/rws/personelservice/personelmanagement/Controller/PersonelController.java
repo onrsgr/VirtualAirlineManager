@@ -17,27 +17,27 @@ public class PersonelController {
     // To Do return all personel
     @GetMapping(value = "getpersonel")
     public String getAllPersonel(){
-
-        return "";
+        System.out.printf("testdasd");
+        return "ascdasdd";
     }
 
     // Add new personel
     @PostMapping(value = "addnewpersonel")
     public String addNewPersonel(){
-
+        System.out.printf("testdasd");
         return "test1";
     }
 
     // Update exiting personel
     @PostMapping(value = "updatepersonel")
     public String updatePersonel(){
-
+        System.out.printf("testdasd");
         return "test2";
     }
 
     @DeleteMapping(value = "deletepersonel")
     public String deletePersonel(){
-
+        System.out.printf("testdasd");
         return "test3";
     }
 
