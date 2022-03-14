@@ -35,6 +35,7 @@ public class PersonelController {
         return "test2";
     }
 
+    //Delete Personel
     @DeleteMapping(value = "deletepersonel")
     public String deletePersonel(){
         System.out.printf("testdasd");
