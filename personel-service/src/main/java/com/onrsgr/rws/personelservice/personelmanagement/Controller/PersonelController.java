@@ -35,7 +35,7 @@ public class PersonelController {
         personelControlService.getAllPersonelForMainPage();
         return "Personel List";
     }
-    
+
     // Add new personel
     @PostMapping("/addnewpersonel")
     public String addNewPersonel(@Valid @RequestBody Personel personel) {
