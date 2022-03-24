@@ -22,7 +22,6 @@ public class PersonelControlService {
     }
 
     public List<Personel> getAllPersonel(){
-        System.out.println(personelRepository.existsById(88));
         return personelRepository.findAll(Sort.by(Sort.Direction.ASC,("personelCallsign")));
     }
 

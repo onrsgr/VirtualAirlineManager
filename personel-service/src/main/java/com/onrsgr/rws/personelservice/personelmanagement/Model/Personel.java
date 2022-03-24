@@ -1,10 +1,8 @@
 package com.onrsgr.rws.personelservice.personelmanagement.Model;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Date;
-import java.util.Objects;
 
 @Entity
 @Table(name = "rws_personel")
@@ -13,19 +11,19 @@ public class Personel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Integer personelId;
-    @NotNull
+    @NotEmpty
     String personelRegistration;
-    @NotNull
+    @NotEmpty
     String personelCallsign;
-    @NotNull
+    @NotEmpty
     String personelName;
-    @NotNull
+    @NotEmpty
     String personelSurname;
-    @NotNull
+    @NotEmpty
     Date personelDateOfBirth;
-    @NotNull
+    @NotEmpty
     String personelRank;
-    @NotNull
+    @NotEmpty
     @Column(name = "ivao_id")
     Integer ivaoID;
 
@@ -94,5 +92,19 @@ public class Personel {
 
     public void setIvaoID(Integer ivaoID) {
         this.ivaoID = ivaoID;
+    }
+
+    @Override
+    public String toString() {
+        return "Personel{" +
+                "personelId=" + personelId +
+                ", personelRegistration='" + personelRegistration + '\'' +
+                ", personelCallsign='" + personelCallsign + '\'' +
+                ", personelName='" + personelName + '\'' +
+                ", personelSurname='" + personelSurname + '\'' +
+                ", personelDateOfBirth=" + personelDateOfBirth +
+                ", personelRank='" + personelRank + '\'' +
+                ", ivaoID=" + ivaoID +
+                '}';
     }
 }

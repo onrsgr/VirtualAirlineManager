@@ -6,6 +6,7 @@ import com.onrsgr.rws.personelservice.personelmanagement.Service.PersonelControl
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,28 +22,30 @@ public class PersonelController {
     }
 
     // Return All Pilots
-    @GetMapping(value = "getpersonel")
+    @GetMapping("/getpersonel")
+    @ResponseBody
     public List<Personel> getAllPersonel() {
         return personelControlService.getAllPersonel();
     }
 
     // Return Personel Data for Public List
-    @GetMapping(value = "getpersonelmain")
+    @GetMapping( "/getpersonelmain")
+    @ResponseBody
     public String getAllPersonelForMainPage() {
         personelControlService.getAllPersonelForMainPage();
         return "Personel List";
     }
-
-
+    
     // Add new personel
-    @PostMapping(value = "addnewpersonel")
-    public String addNewPersonel(Personel personel) {
+    @PostMapping("/addnewpersonel")
+    public String addNewPersonel(@Valid @RequestBody Personel personel) {
+        System.out.println(personel.toString());
         personelControlService.addNewPersonel(personel);
         return "test1";
     }
 
     // Update exiting personel
-    @PostMapping(value = "updatepersonel")
+    @PostMapping( "/updatepersonel")
     public String updatePersonel(Personel personel) {
         personelControlService.updateCurrentPersonel(personel);
         return "test2";
