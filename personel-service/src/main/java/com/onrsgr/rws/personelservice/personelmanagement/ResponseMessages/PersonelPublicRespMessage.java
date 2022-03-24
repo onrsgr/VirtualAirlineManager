@@ -1,9 +1,12 @@
 package com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Objects;
 
 // Personel List For Public Website
 
+@Component
 public class PersonelPublicRespMessage {
 
     String personelCallsign;
@@ -45,11 +48,7 @@ public class PersonelPublicRespMessage {
 
     @Override
     public String toString() {
-        return "PersonelPublicRespMessage{" +
-                "personelCallsign='" + personelCallsign + '\'' +
-                ", personelName='" + personelName + '\'' +
-                ", ivaoID='" + ivaoID + '\'' +
-                '}';
+        return "PersonelPublicRespMessage{" + "personelCallsign='" + personelCallsign + '\'' + ", personelName='" + personelName + '\'' + ", ivaoID='" + ivaoID + '\'' + '}';
     }
 
     @Override
