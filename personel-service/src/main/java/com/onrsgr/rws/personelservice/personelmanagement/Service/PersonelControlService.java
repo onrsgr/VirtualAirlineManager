@@ -15,16 +15,14 @@ public class PersonelControlService {
         this.personelRepository = personelRepository;
     }
 
-    public void addNewPersonel(Personel personel){
+    public void addNewPersonel(Personel personel) {
         personelRepository.save(personel);
     }
 
-    public void deletePersonel(Personel personel){
-
-
+    public void deletePersonel(Personel personel) {
     }
 
-    public void updateCurrentPersonel(Personel personel){
+    public void updateCurrentPersonel(Personel personel) {
 
     }
 }

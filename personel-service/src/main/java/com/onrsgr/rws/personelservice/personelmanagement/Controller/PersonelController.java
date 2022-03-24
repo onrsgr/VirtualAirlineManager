@@ -14,12 +14,18 @@ public class PersonelController {
         this.personelControlService = personelControlService;
     }
 
-    // To Do return all personel
+
+
+    // To Do
+    // Return all personel
     @GetMapping(value = "getpersonel")
     public String getAllPersonel(){
         System.out.printf("testdasd");
         return "ascdasdd";
     }
+
+    // Return Personel Data for Public List
+
 
     // Add new personel
     @PostMapping(value = "addnewpersonel")
