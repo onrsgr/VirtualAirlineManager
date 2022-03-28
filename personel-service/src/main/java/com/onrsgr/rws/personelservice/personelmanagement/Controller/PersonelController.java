@@ -23,22 +23,20 @@ public class PersonelController {
 
     // Return All Pilots
     @GetMapping("/getpersonel")
-    @ResponseBody
-    public List<Personel> getAllPersonel() {
+    @ResponseBody public List<Personel> getAllPersonel() {
         return personelControlService.getAllPersonel();
     }
 
     // Return Personel Data for Public List
     @GetMapping( "/getpersonelmain")
-    @ResponseBody
-    public String getAllPersonelForMainPage() {
+    @ResponseBody public String getAllPersonelForMainPage() {
         personelControlService.getAllPersonelForMainPage();
         return "Personel List";
     }
 
     // Add new personel
     @PostMapping("/addnewpersonel")
-    public String addNewPersonel(@Valid @RequestBody Personel personel) {
+    @ResponseBody public String addNewPersonel(@Valid @RequestBody Personel personel) {
         System.out.println(personel.toString());
         personelControlService.addNewPersonel(personel);
         return "test1";
@@ -46,14 +44,14 @@ public class PersonelController {
 
     // Update exiting personel
     @PostMapping( "/updatepersonel")
-    public String updatePersonel(Personel personel) {
+    @ResponseBody public String updatePersonel(Personel personel) {
         personelControlService.updateCurrentPersonel(personel);
         return "test2";
     }
 
     //Delete Personel
     @DeleteMapping(value = "deletepersonel")
-    public String deletePersonel(Personel personel) {
+    @ResponseBody public String deletePersonel(Personel personel) {
         personelControlService.deletePersonel(personel);
         return "test3";
     }

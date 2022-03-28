@@ -26,7 +26,6 @@ public class PersonelControlService {
     }
 
     public void getAllPersonelForMainPage(){
-        System.out.println("TEST");
 
     }
 
@@ -35,9 +34,18 @@ public class PersonelControlService {
     }
 
     public void deletePersonel(Personel personel) {
+
     }
 
     public void updateCurrentPersonel(Personel personel) {
+
+    }
+
+
+    // Frontend için hazırlanacak
+    public List<PersonelPublicRespMessage> getPersonelListForPublicView(List<Personel> personel){
+
+        return null;
 
     }
 }
