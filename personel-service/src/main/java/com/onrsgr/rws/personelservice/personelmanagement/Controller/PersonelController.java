@@ -5,11 +5,13 @@ import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.Person
 import com.onrsgr.rws.personelservice.personelmanagement.Service.PersonelControlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.annotation.RequestScope;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@RequestScope
 public class PersonelController {
 
     private PersonelControlService personelControlService;
