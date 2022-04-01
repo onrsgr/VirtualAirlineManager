@@ -6,10 +6,12 @@ import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.Person
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.List;
 
 @Service
+@RequestScope
 public class PersonelControlService {
 
     private PersonelRepository personelRepository;
