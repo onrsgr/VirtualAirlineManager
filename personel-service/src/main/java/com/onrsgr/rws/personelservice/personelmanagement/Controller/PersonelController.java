@@ -6,6 +6,8 @@ import com.onrsgr.rws.personelservice.personelmanagement.Service.PersonelControl
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
+
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -37,7 +39,6 @@ public class PersonelController {
     // Add new personel
     @PostMapping("/addnewpersonel")
     @ResponseBody public String addNewPersonel(@RequestBody Personel personel) {
-        System.out.println(personel.toString());
         personelControlService.addNewPersonel(personel);
         return "test1";
     }
