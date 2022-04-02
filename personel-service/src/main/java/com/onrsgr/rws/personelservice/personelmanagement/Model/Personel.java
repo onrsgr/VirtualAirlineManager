@@ -1,11 +1,14 @@
 package com.onrsgr.rws.personelservice.personelmanagement.Model;
 
+import org.springframework.web.context.annotation.RequestScope;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 
 @Entity
 @Table(name = "rws_personel")
+@RequestScope
 public class Personel {
 
     @Id
@@ -19,13 +22,14 @@ public class Personel {
     String personelName;
     @NotEmpty
     String personelSurname;
-    @NotEmpty
+    //@NotEmpty
     Date personelDateOfBirth;
     @NotEmpty
     String personelRank;
+
+    @Column(name = "personel_ivao_id")
     @NotEmpty
-    @Column(name = "ivao_id")
-    Integer ivaoID;
+    String personelIvaoID;
 
     public Personel() {
     }
@@ -86,12 +90,12 @@ public class Personel {
         this.personelRank = personelRank;
     }
 
-    public Integer getIvaoID() {
-        return ivaoID;
+    public String getPersonelIvaoID() {
+        return personelIvaoID;
     }
 
-    public void setIvaoID(Integer ivaoID) {
-        this.ivaoID = ivaoID;
+    public void setPersonelIvaoID(String ivaoID) {
+        this.personelIvaoID = ivaoID;
     }
 
     @Override
@@ -104,7 +108,7 @@ public class Personel {
                 ", personelSurname='" + personelSurname + '\'' +
                 ", personelDateOfBirth=" + personelDateOfBirth +
                 ", personelRank='" + personelRank + '\'' +
-                ", ivaoID=" + ivaoID +
+                ", ivaoID=" + personelIvaoID +
                 '}';
     }
 }

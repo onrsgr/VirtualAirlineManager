@@ -23,17 +23,16 @@ public class PersonelControlService {
         this.personelPublicRespMessage = personelPublicRespMessage;
     }
 
-    public List<Personel> getAllPersonel(){
-        return personelRepository.findAll(Sort.by(Sort.Direction.ASC,("personelCallsign")));
+    public List<Personel> getAllPersonel() {
+        return personelRepository.findAll(Sort.by(Sort.Direction.ASC, ("personelCallsign")));
     }
 
-    public List<PersonelPublicRespMessage> getAllPersonelForMainPage(){
+    public List<PersonelPublicRespMessage> getAllPersonelForMainPage() {
 
         return null;
     }
 
     public void addNewPersonel(Personel personel) {
-
         personelRepository.save(personel);
     }
 
@@ -47,9 +46,7 @@ public class PersonelControlService {
 
 
     // Frontend için hazırlanacak
-    public List<PersonelPublicRespMessage> getPersonelListForPublicView(List<Personel> personel){
-
+    public List<PersonelPublicRespMessage> getPersonelListForPublicView(List<Personel> personel) {
         return null;
-
     }
 }
