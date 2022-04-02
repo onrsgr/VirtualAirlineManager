@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -45,7 +44,8 @@ public class PersonelController {
 
     // Update exiting personel
     @PostMapping( "/updatepersonel")
-    @ResponseBody public String updatePersonel(Personel personel) {
+    @ResponseBody public String updatePersonel(@RequestBody Personel personel) {
+        System.out.println(personel);
         personelControlService.updateCurrentPersonel(personel);
         return "test2";
     }

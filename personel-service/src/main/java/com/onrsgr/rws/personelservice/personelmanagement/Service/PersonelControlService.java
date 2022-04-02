@@ -5,6 +5,7 @@ import com.onrsgr.rws.personelservice.personelmanagement.Repository.PersonelRepo
 import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.PersonelPublicRespMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
 
@@ -40,13 +41,8 @@ public class PersonelControlService {
         personelRepository.delete(personel);
     }
 
+    @Modifying
     public void updateCurrentPersonel(Personel personel) {
         personelRepository.save(personel);
-    }
-
-
-    // Frontend için hazırlanacak
-    public List<PersonelPublicRespMessage> getPersonelListForPublicView(List<Personel> personel) {
-        return null;
     }
 }
