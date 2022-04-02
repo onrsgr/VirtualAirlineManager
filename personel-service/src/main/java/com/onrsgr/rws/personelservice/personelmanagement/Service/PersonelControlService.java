@@ -27,20 +27,22 @@ public class PersonelControlService {
         return personelRepository.findAll(Sort.by(Sort.Direction.ASC,("personelCallsign")));
     }
 
-    public void getAllPersonelForMainPage(){
+    public List<PersonelPublicRespMessage> getAllPersonelForMainPage(){
 
+        return null;
     }
 
     public void addNewPersonel(Personel personel) {
+
         personelRepository.save(personel);
     }
 
     public void deletePersonel(Personel personel) {
-
+        personelRepository.delete(personel);
     }
 
     public void updateCurrentPersonel(Personel personel) {
-
+        personelRepository.save(personel);
     }
 
 
