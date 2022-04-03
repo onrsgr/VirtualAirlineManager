@@ -13,7 +13,7 @@ public class Personel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer personelId;
+    Long personelId;
     @NotEmpty
     String personelRegistration;
     @NotEmpty
@@ -34,11 +34,22 @@ public class Personel {
     public Personel() {
     }
 
-    public Integer getPersonelId() {
+    public Personel(Long personelId, String personelRegistration, String personelCallsign, String personelName, String personelSurname, Date personelDateOfBirth, String personelRank, String personelIvaoID) {
+        this.personelId = personelId;
+        this.personelRegistration = personelRegistration;
+        this.personelCallsign = personelCallsign;
+        this.personelName = personelName;
+        this.personelSurname = personelSurname;
+        this.personelDateOfBirth = personelDateOfBirth;
+        this.personelRank = personelRank;
+        this.personelIvaoID = personelIvaoID;
+    }
+
+    public Long getPersonelId() {
         return personelId;
     }
 
-    public void setPersonelId(Integer personelId) {
+    public void setPersonelId(Long personelId) {
         this.personelId = personelId;
     }
 

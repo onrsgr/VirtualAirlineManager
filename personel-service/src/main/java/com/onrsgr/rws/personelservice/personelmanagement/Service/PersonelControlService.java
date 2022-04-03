@@ -43,6 +43,7 @@ public class PersonelControlService {
 
     @Modifying
     public void updateCurrentPersonel(Personel personel) {
+        //personelRepository.updatePersonel(personel.getPersonelId(),personel);
         personelRepository.save(personel);
     }
 }

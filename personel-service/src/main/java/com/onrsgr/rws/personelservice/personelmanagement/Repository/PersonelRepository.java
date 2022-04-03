@@ -5,14 +5,21 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.context.annotation.RequestScope;
+
+import javax.transaction.Transactional;
+import java.util.Date;
 
 @Repository
-public interface PersonelRepository extends JpaRepository<Personel,Integer> {
+public interface PersonelRepository extends JpaRepository<Personel, Long> {
 
-    /*
+
     @Modifying
-    @Query("update Personel p set p = personel + ?2 where p.personelId=?1")
-    void updatePersonel(Long personelID, Personel personel);
-    */
+    @Transactional
+    @Query(value = "update rws_personel set rws_personel.personel_registration=?2 , rws_personel.personel_callsign=?3" +
+            "rws_personel.personel_name=?3, rws_personel.personel_surname=?4, rws_personel.personel_date_of_birth=?5" +
+            "rws_personel.personel_rank=?6, rws_personel.personel_ivao_id=?7" +
+            " where rws_personel.personel_id=?1", nativeQuery = true)
+    void updatePersonel(Long personelId, String personelRegistration, String personelCallsign, String personelName,
+                        String personelSurname, Date personelDateOfBirth, String personelRank, String personelIvaoID);
+
 }
