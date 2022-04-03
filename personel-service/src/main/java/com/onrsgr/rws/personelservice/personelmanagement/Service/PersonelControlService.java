@@ -51,14 +51,17 @@ public class PersonelControlService {
     @Modifying
     public PersonelControlRespMessage updateCurrentPersonel(Personel personel) {
         //personelRepository.updatePersonel(personel.getPersonelId(),personel);
-
+        /*
         if (controlNullFieldsForUpdatePersonel(personel)) {
         } else {
         }
         //personelRepository.save(personel);
+        
+         */
         return null;
     }
 
+    /*
     public boolean controlNullFieldsForUpdatePersonel(Personel personel) {
         Field[] personelFields = personel.getClass().getDeclaredFields();
         for (Field personelInfo : personelFields) {
@@ -73,4 +76,5 @@ public class PersonelControlService {
         }
         return true;
     }
+    */
 }
