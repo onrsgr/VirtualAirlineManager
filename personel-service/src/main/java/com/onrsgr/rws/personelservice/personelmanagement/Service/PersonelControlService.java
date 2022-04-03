@@ -38,8 +38,7 @@ public class PersonelControlService {
     }
 
     public PersonelControlRespMessage addNewPersonel(Personel personel) {
-
-        personelRepository.save(personel);
+        // personelRepository.save(personel);
         return null;
     }
 
@@ -52,15 +51,24 @@ public class PersonelControlService {
     @Modifying
     public PersonelControlRespMessage updateCurrentPersonel(Personel personel) {
         //personelRepository.updatePersonel(personel.getPersonelId(),personel);
-        personelRepository.save(personel);
+
+        if (controlNullFieldsForUpdatePersonel(personel)) {
+        } else {
+        }
+        //personelRepository.save(personel);
         return null;
     }
 
-    public boolean controlNullFields(Personel personel) {
+    public boolean controlNullFieldsForUpdatePersonel(Personel personel) {
         Field[] personelFields = personel.getClass().getDeclaredFields();
         for (Field personelInfo : personelFields) {
-            if (personelInfo == null || personelInfo.toString().trim().isEmpty()) {
-                return false;
+            try {
+                personelInfo.setAccessible(true);
+                if (personelInfo.get(personel) == null || ((String) personelInfo.get(personel)).trim().isEmpty()) {
+                    return false;
+                }
+            } catch (Exception e) {
+
             }
         }
         return true;
