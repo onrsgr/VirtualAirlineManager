@@ -2,6 +2,7 @@ package com.onrsgr.rws.personelservice.personelmanagement.Service;
 
 import com.onrsgr.rws.personelservice.personelmanagement.Model.Personel;
 import com.onrsgr.rws.personelservice.personelmanagement.Repository.PersonelRepository;
+import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.PersonelControlRespMessage;
 import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.PersonelPublicRespMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -28,22 +29,29 @@ public class PersonelControlService {
         return personelRepository.findAll(Sort.by(Sort.Direction.ASC, ("personelCallsign")));
     }
 
+    // Frontend Main Page Liste Güncellemesi İstediğinde Kullanılacak
+
     public List<PersonelPublicRespMessage> getAllPersonelForMainPage() {
 
         return null;
     }
 
-    public void addNewPersonel(Personel personel) {
+    public PersonelControlRespMessage addNewPersonel(Personel personel) {
+
         personelRepository.save(personel);
+        return null;
     }
 
-    public void deletePersonel(Personel personel) {
+    public PersonelControlRespMessage deletePersonel(Personel personel) {
+
         personelRepository.delete(personel);
+        return null;
     }
 
     @Modifying
-    public void updateCurrentPersonel(Personel personel) {
+    public PersonelControlRespMessage updateCurrentPersonel(Personel personel) {
         //personelRepository.updatePersonel(personel.getPersonelId(),personel);
         personelRepository.save(personel);
+        return null;
     }
 }

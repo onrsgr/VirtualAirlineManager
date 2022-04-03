@@ -12,7 +12,7 @@ import java.util.Date;
 @Repository
 public interface PersonelRepository extends JpaRepository<Personel, Long> {
 
-
+    // Alternative Usage
     @Modifying
     @Transactional
     @Query(value = "update rws_personel set rws_personel.personel_registration=?2 , rws_personel.personel_callsign=?3" +

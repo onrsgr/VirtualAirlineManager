@@ -45,7 +45,6 @@ public class PersonelController {
     // Update exiting personel
     @PostMapping( "/updatepersonel")
     @ResponseBody public String updatePersonel(@RequestBody Personel personel) {
-        System.out.println(personel);
         personelControlService.updateCurrentPersonel(personel);
         return "test2";
     }

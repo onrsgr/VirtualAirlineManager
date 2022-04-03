@@ -4,8 +4,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
-// Personel List For Public Website
-
 @Component
 public class PersonelPublicRespMessage {
 
