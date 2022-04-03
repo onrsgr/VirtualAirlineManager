@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 @Service
@@ -53,5 +54,15 @@ public class PersonelControlService {
         //personelRepository.updatePersonel(personel.getPersonelId(),personel);
         personelRepository.save(personel);
         return null;
+    }
+
+    public boolean controlNullFields(Personel personel) {
+        Field[] personelFields = personel.getClass().getDeclaredFields();
+        for (Field personelInfo : personelFields) {
+            if (personelInfo == null || personelInfo.toString().trim().isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 }
