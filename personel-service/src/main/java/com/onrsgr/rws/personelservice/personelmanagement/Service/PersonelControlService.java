@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -39,14 +40,9 @@ public class PersonelControlService {
 
     @Modifying
     public PersonelControlRespMessage updateCurrentPersonel(Personel personel) {
-        //personelRepository.updatePersonel(personel.getPersonelId(),personel);
-        /*
-        if (controlNullFieldsForUpdatePersonel(personel)) {
-        } else {
-        }
-        //personelRepository.save(personel);
-
-         */
+        personelRepository.updatePersonel(personel.getPersonelId(),personel.getPersonelRegistration(),
+                personel.getPersonelCallsign(), personel.getPersonelName(),personel.getPersonelSurname(),
+                personel.getPersonelDateOfBirth(),personel.getPersonelRank(),personel.getPersonelIvaoID());
         return null;
     }
 
