@@ -18,7 +18,6 @@ public class PersonelControlService {
 
     private PersonelRepository personelRepository;
     private PersonelPublicRespMessage personelPublicRespMessage;
-    private List<Personel> personelList = new ArrayList<>();
 
     @Autowired
     public PersonelControlService(PersonelRepository personelRepository, PersonelPublicRespMessage personelPublicRespMessage) {
@@ -58,18 +57,6 @@ public class PersonelControlService {
         //personelRepository.save(personel);
 
          */
-        return null;
-    }
-
-    private final List<PersonelPublicRespMessage> preparePublicPersonelList(){
-
-        List<PersonelPublicRespMessage> publicPersonelList = new ArrayList<>();
-        this.personelList = personelRepository.findAll(Sort.by(Sort.Direction.ASC, ("personelCallsign")));
-        for(Personel personel:personelList){
-            
-        }
-
-
         return null;
     }
 
