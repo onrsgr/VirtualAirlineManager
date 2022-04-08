@@ -9,8 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
-
-import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,6 +18,7 @@ public class PersonelControlService {
 
     private PersonelRepository personelRepository;
     private PersonelPublicRespMessage personelPublicRespMessage;
+    private List<Personel> personelList = new ArrayList<>();
 
     @Autowired
     public PersonelControlService(PersonelRepository personelRepository, PersonelPublicRespMessage personelPublicRespMessage) {
@@ -30,8 +30,8 @@ public class PersonelControlService {
         return personelRepository.findAll(Sort.by(Sort.Direction.ASC, ("personelCallsign")));
     }
 
-    // Frontend Main Page Liste Güncellemesi İstediğinde Kullanılacak
-
+    // Frontend Main Page Liste Güncellemesi İstendiğinde Kullanılacak
+    // Admin Panelinde Kullanılacak
     public List<PersonelPublicRespMessage> getAllPersonelForMainPage() {
 
         return null;
@@ -58,6 +58,18 @@ public class PersonelControlService {
         //personelRepository.save(personel);
 
          */
+        return null;
+    }
+
+    private final List<PersonelPublicRespMessage> preparePublicPersonelList(){
+
+        List<PersonelPublicRespMessage> publicPersonelList = new ArrayList<>();
+        this.personelList = personelRepository.findAll(Sort.by(Sort.Direction.ASC, ("personelCallsign")));
+        for(Personel personel:personelList){
+            
+        }
+
+
         return null;
     }
 

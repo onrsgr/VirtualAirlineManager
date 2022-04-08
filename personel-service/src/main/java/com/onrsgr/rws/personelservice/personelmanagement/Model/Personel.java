@@ -14,13 +14,13 @@ public class Personel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long personelId;
-    //@NotEmpty
+    @NotEmpty
     String personelRegistration;
-    //@NotEmpty
+    @NotEmpty
     String personelCallsign;
-    //@NotEmpty
+    @NotEmpty
     String personelName;
-    //@NotEmpty
+    @NotEmpty
     String personelSurname;
     //@NotEmpty
     Date personelDateOfBirth;
