@@ -1,7 +1,6 @@
 package com.onrsgr.rws.personelservice.personelmanagement.Controller;
 
 import com.onrsgr.rws.personelservice.personelmanagement.Model.Personel;
-import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.PersonelPublicRespMessage;
 import com.onrsgr.rws.personelservice.personelmanagement.Service.PersonelControlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
