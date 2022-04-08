@@ -1,16 +1,13 @@
 package com.onrsgr.rws.personelservice.personelmanagement.Repository;
 
 import com.onrsgr.rws.personelservice.personelmanagement.Model.Personel;
-import com.onrsgr.rws.personelservice.personelmanagement.ResponseMessages.PersonelPublicRespMessage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.rest.core.config.Projection;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.Date;
-import java.util.List;
 
 @Repository
 public interface PersonelRepository extends JpaRepository<Personel, Long> {
@@ -24,6 +21,4 @@ public interface PersonelRepository extends JpaRepository<Personel, Long> {
             " where rws_personel.personel_id=?1", nativeQuery = true)
     void updatePersonel(Long personelId, String personelRegistration, String personelCallsign, String personelName,
                         String personelSurname, Date personelDateOfBirth, String personelRank, String personelIvaoID);
-
-    //List<PersonelPublicRespMessage> findAllByPersonelCallsign();
-}
+    }
