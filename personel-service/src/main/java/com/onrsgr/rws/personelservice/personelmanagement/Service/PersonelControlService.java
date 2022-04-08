@@ -23,6 +23,9 @@ public class PersonelControlService {
     }
 
     public List<Personel> getAllPersonel() {
+        System.out.println("**************");
+        ///System.out.println(personelRepository.findAllByPersonelCallsign());
+        System.out.println("**************");
         return personelRepository.findAll(Sort.by(Sort.Direction.ASC, ("personelCallsign")));
     }
 
@@ -31,7 +34,7 @@ public class PersonelControlService {
 
 
     public PersonelControlRespMessage addNewPersonel(Personel personel) {
-        // personelRepository.save(personel);
+        //personelRepository.save(personel);
         return null;
     }
 

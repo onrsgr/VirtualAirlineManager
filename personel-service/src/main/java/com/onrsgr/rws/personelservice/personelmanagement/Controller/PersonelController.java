@@ -13,12 +13,10 @@ import java.util.List;
 public class PersonelController {
 
     private PersonelControlService personelControlService;
-    private PersonelPublicRespMessage personelPublicRespMessage;
 
     @Autowired
-    public PersonelController(PersonelControlService personelControlService, PersonelPublicRespMessage personelPublicRespMessage) {
+    public PersonelController(PersonelControlService personelControlService) {
         this.personelControlService = personelControlService;
-        this.personelPublicRespMessage = personelPublicRespMessage;
     }
 
     // Return All Pilots
@@ -30,7 +28,7 @@ public class PersonelController {
     // Return Personel Data for Public List
     @GetMapping( "/getpersonelmain")
     @ResponseBody public String getAllPersonelForMainPage() {
-        personelControlService.getAllPersonelForMainPage();
+       // personelControlService.getAllPersonelForMainPage();
         return "Personel List";
     }
 
