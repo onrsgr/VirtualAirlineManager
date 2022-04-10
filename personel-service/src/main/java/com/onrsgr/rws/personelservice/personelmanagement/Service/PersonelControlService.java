@@ -62,4 +62,14 @@ public class PersonelControlService {
         return true;
     }
     */
+
+    private PersonelControlRespMessage generateSuccessfullRespMessage(Personel personel){
+
+        return null;
+    }
+
+    private PersonelControlRespMessage generateUnsuccessfullRespMessage(Personel personel){
+
+        return null;
+    }
 }
