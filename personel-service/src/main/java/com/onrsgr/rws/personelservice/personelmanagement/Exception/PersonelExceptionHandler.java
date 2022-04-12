@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 
 @ControllerAdvice
 public class PersonelExceptionHandler {
-
     /*
     @ExceptionHandler(MissingHeaderInfoException.class)
     public final ResponseEntity<ErrorResponse> handleInvalidTraceIdException
